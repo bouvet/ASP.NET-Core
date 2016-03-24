@@ -1,3 +1,3 @@
-# 5.Dependency Injection & unit testing
+# 5. Dependency Injection & unit testing
 
 todo: Legg inn oppgaven her
