@@ -1,7 +1,7 @@
 #1. Getting started
 
-[Til oppgaveoversikt] (../../..)
+[Til startsiden] (../../..)
 
 todo: Legg inn oppgaven her
 
-[Til oppgaveoversikt] (../../..)
+[Til startsiden] (../../..)
