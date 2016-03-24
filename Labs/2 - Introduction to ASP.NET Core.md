@@ -1,7 +1,7 @@
 # 2. Introduction to ASP.NET Core
 
-[Til oppgaveoversikt] (../../..)
+[Til startsiden] (../../..)
 
 todo: Legg inn oppgaven her
 
-[Til oppgaveoversikt] (../../..)
+[Til startsiden] (../../..)
