@@ -2,7 +2,7 @@
 
 Oppgavene er bygget på [Damian Edwards ASP.NET 5 Workshop] (https://github.com/DamianEdwards/aspnet5-workshop).
 
-1. Getting started
+[1. Getting started] (./Labs/1 - Getting started.md)
 2. Introduction to ASP.NET Core
 3. Introduction to Routing & MVC
 4. APIs with MVC6
