@@ -1,5 +1,5 @@
 #1. Getting started
 
-[Til oppgaveoversikt] (.)
+[Til oppgaveoversikt] (../../..)
 
 todo: Legg inn oppgaven her
