@@ -5,8 +5,8 @@
 ## Create a new Console project, configure it to use the unstable packages feed, and upgrade it to RC2
 
 1. Open Visual Studio 2015
-1. Create a new ASP.NET 5 application:
-  1. File -> New -> ASP.NET Web Application -> ASP.NET 5 -> Console Application (Package)
+1. Create a new ASP.NET Core application:
+  1. New Project -> Web -> Console Application (Package)
 1. Open the `global.json` file and remove the `sdk` section. This will instruct Visual Studio to use the version configured as "default" from the steps before.
 1. Add a `NuGet.config` file to the root of the solution with the following contents. This will configure NuGet to use the unstable feed for packages:
 
@@ -30,7 +30,7 @@
   },
   ```
 
-1. Add a `Startup.cs` file with a `Configure` that prints out the string "Hello World" (you may need to add `using Microsoft.AspNet.Http` for the WriteAsync extension method):
+1. Add a `Startup.cs` file (from template) with a `Configure` that prints out the string "Hello World" (you may need to add `using Microsoft.AspNet.Http` for the WriteAsync extension method):
 
   ```C#
   public class Startup
@@ -45,7 +45,7 @@
   }
   ```
   
-1. Create a new `WebHostBuilder` in the `Program.cs` file to setup the server, urls and Startup class:
+1. Create a new `WebHostBuilder` in the `Program.cs` file to setup the server, urls and Startup class (you may need to add `using Microsoft.AspNet.Hosting` for the WebHostBuilder):
 
   ```C#
   public static void Main(string[] args)
