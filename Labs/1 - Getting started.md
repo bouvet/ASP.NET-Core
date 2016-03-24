@@ -1,5 +1,5 @@
 #1. Getting started
 
-[Til oppgaveoversikt] (ASP.NET-Core/README.md)
+[Til oppgaveoversikt] (./README.md)
 
 todo: Legg inn oppgaven her
