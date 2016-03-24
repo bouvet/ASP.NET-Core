@@ -22,15 +22,15 @@
 1. You should have a `Program.cs` with an empty `Main` method.
 
 ## Add ASP.NET 5 to the project
-1. Add `Microsoft.AspNet.Server.Kestrel` to `project.json`.
+1. Add `Microsoft.AspNetCore.Server.Kestrel` to `project.json`.
 
   ```JSON
   "dependencies": {
-    "Microsoft.AspNet.Server.Kestrel": "1.0.0-*"
+    "Microsoft.AspNetCore.Server.Kestrel": "1.0.0-*"
   },
   ```
 
-1. Add a `Startup.cs` file (from template) with a `Configure` that prints out the string "Hello World" (you may need to add `using Microsoft.AspNet.Http` for the WriteAsync extension method):
+1. Add a `Startup.cs` file (from template) with a `Configure` that prints out the string "Hello World" (you may need to add `using Microsoft.AspNetCore.Http` for the WriteAsync extension method):
 
   ```C#
   public class Startup
@@ -44,14 +44,16 @@
       }
   }
   ```
+
+1. Change any references to `Microsoft.AspNet.*` in `Startup.cs` to `Microsoft.AspNetCore.*`
   
-1. Create a new `WebHostBuilder` in the `Program.cs` file to setup the server, urls and Startup class (you may need to add `using Microsoft.AspNet.Hosting` for the WebHostBuilder):
+1. Create a new `WebHostBuilder` in the `Program.cs` file to setup the server, urls and Startup class (you may need to add `using Microsoft.AspNetCore.Hosting` for the WebHostBuilder):
 
   ```C#
   public static void Main(string[] args)
   {
       var host = new WebHostBuilder()
-                  .UseServer("Microsoft.AspNet.Server.Kestrel")
+                  .UseServer("Microsoft.AspNetCore.Server.Kestrel")
                   .UseUrls("http://localhost:5001")
                   .UseStartup<Startup>()
                   .Build();
@@ -69,7 +71,7 @@
   public static void Main(string[] args)
   {
       var host = new WebHostBuilder()
-                  .UseServer("Microsoft.AspNet.Server.Kestrel")
+                  .UseServer("Microsoft.AspNetCore.Server.Kestrel")
                   .UseUrls("http://localhost:5001")
                   .UseEnvironment(EnvironmentName.Development)
                   .UseStartup<Startup>()
@@ -86,7 +88,7 @@
 
   ```JSON
   {
-    "server": "Microsoft.AspNet.Server.Kestrel",
+    "server": "Microsoft.AspNetCore.Server.Kestrel",
     "server.urls": "http://localhost:5001"
   }
   ```
@@ -115,17 +117,17 @@
 
 1. Right-mouse click on the project and select "Properties"
 1. Open the "Debug" tab
-1. Add an environment variable named "ASPNET_ENVIRONMENT" with a value of "Development"
+1. Add an environment variable named "ASPNETCORE_ENVIRONMENT" with a value of "Development"
 1. Run the application again and the current environment should be set to Development.
 
 ## Serving static files
 
-1. Add the `Microsoft.AspNet.StaticFiles` package to `project.json`:
+1. Add the `Microsoft.AspNetCore.StaticFiles` package to `project.json`:
 
   ```JSON
   "dependencies": {
-    "Microsoft.AspNet.Server.Kestrel": "1.0.0-*",
-    "Microsoft.AspNet.StaticFiles": "1.0.0-*"
+    "Microsoft.AspNetCore.Server.Kestrel": "1.0.0-*",
+    "Microsoft.AspNetCore.StaticFiles": "1.0.0-*"
   },
   ```
 1. Go to `Startup.cs` in the `Configure` method and add `UseStaticFiles` before the hello world middleware:
@@ -153,7 +155,7 @@
       <title></title>
   </head>
   <body>
-      <h1>Hello from ASP.NET 5!</h1> 
+      <h1>Hello from ASP.NET Core 1.0!</h1> 
   </body>
   </html>
   ```
@@ -168,13 +170,13 @@
 
 ## Add IIS Support
 
-1. Add the `Microsoft.AspNet.IISPlatformHandler` package to `project.json`:
+1. Add the `Microsoft.AspNetCore.IISPlatformHandler` package to `project.json`:
 
   ```JSON
   "dependencies": {
-    "Microsoft.AspNet.IISPlatformHandler": "1.0.0-*",
-    "Microsoft.AspNet.Server.Kestrel": "1.0.0-*",
-    "Microsoft.AspNet.StaticFiles": "1.0.0-*"
+    "Microsoft.AspNetCore.IISPlatformHandler": "1.0.0-*",
+    "Microsoft.AspNetCore.Server.Kestrel": "1.0.0-*",
+    "Microsoft.AspNetCore.StaticFiles": "1.0.0-*"
   },
   ```
 1. Add `UseIISPlatformHandlerUrl()` to the `Main` method in `Program.cs`:
@@ -182,7 +184,7 @@
   ```C#
   public static void Main(string[] args)
   {
-      var host = new WebApplicationBuilder()
+      var host = new WebHostBuilder()
                   .UseDefaultConfiguration(args)
                   .UseIISPlatformHandlerUrl()
                   .UseStartup<Startup>()
@@ -204,10 +206,10 @@
   ```
 
 1. Right click project properties, go to the `Debug` tab and click `New...` next to the profile:
-
     ![image](https://cloud.githubusercontent.com/assets/95136/12227671/00b77b96-b828-11e5-97ef-487cac89fb3f.png)
 
 1. Save the launch profile called IIS Express navigate to Properties folder and change `launchSettings.json` to the following:
+
 
   ```JSON
   {
@@ -224,7 +226,7 @@
         "commandName": "IISExpress",
         "launchBrowser": true,
         "environmentVariables": {
-          "ASPNET_ENVIRONMENT": "Development"
+          "ASPNETCORE_ENVIRONMENT": "Development"
         }
       }
     }
