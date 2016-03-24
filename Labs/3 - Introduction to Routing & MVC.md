@@ -1,7 +1,7 @@
 # 3. Introduction to Routing & MVC
 
-[Til oppgaveoversikt] (../../..)
+[Til startsiden] (../../..)
 
 todo: Legg inn oppgaven her
 
-[Til oppgaveoversikt] (../../..)
+[Til startsiden] (../../..)
