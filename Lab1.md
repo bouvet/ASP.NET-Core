@@ -1,3 +1,3 @@
 #1. Getting started
 
-Legg inn oppgaven her
+todo: Legg inn oppgaven her
