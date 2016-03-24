@@ -1,5 +1,5 @@
 #1. Getting started
 
-[Til oppgaveoversikt] (../../../README.md)
+[Til oppgaveoversikt] (.)
 
 todo: Legg inn oppgaven her
