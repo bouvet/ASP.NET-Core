@@ -1,5 +1,5 @@
 # 3. Introduction to Routing & MVC
-# todo: Verifisèr koden
+# todo: Verifiser koden
 
 [Til startsiden] (../../..)
 
