@@ -2,8 +2,6 @@
 
 [Til startsiden] (../../..)
 
-# Getting Started
-
 ## Installing & updating ASP.NET 5
 1. Go to https://docs.asp.net/en/latest/getting-started/index.html and follow the instructions for installing ASP.NET 5 on your OS.
 1. Go to a command prompt and update `dnvm`:
