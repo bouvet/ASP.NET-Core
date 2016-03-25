@@ -8,4 +8,4 @@ Oppgavene er bygget på [Damian Edwards ASP.NET 5 Workshop] (https://github.com/
 4. [APIs with MVC6] (./Labs/4 - APIs with MVC6.md)
 5. [Dependency Injection & unit testing] (./Labs/5 - Dependency Injection & unit testing.md)
 6. [Middleware] (./Labs/6 - Middleware.md)
-7. [Tag helpers] (./Labs/7 - Tag helpers.md)
+7. [Working with Razor Tag Helpers] (./Labs/7 - Working with Razor Tag Helpers.md)
