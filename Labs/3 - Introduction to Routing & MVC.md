@@ -1,4 +1,5 @@
-# 3. Introduction to Routing & MVC (ikke verifisert kode)
+# 3. Introduction to Routing & MVC
+# todo: Verifisèr koden
 
 [Til startsiden] (../../..)
 
