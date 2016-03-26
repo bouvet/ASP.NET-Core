@@ -22,6 +22,17 @@
 1. You should have a `Program.cs` with an empty `Main` method.
 
 ## Add ASP.NET 5 to the project
+1. Change the framework reference `dnx451` in `project.json` to `net451`.
+
+  ```JSON
+  "frameworks": {
+    "net451": { },
+    "dnxcore50": {
+		...
+	}
+  },
+  ```
+
 1. Add `Microsoft.AspNetCore.Server.Kestrel` to `project.json`.
 
   ```JSON
@@ -99,7 +110,7 @@
   public static void Main(string[] args)
   {
       var host = new WebApplicationBuilder()
-                  .UseDefaultConfiguration(args)
+                  .UseDefaultHostingConfiguration(args)
                   .UseStartup<Startup>()
                   .Build();
       host.Run();
@@ -185,7 +196,7 @@
   public static void Main(string[] args)
   {
       var host = new WebHostBuilder()
-                  .UseDefaultConfiguration(args)
+                  .UseDefaultHostingConfiguration(args)
                   .UseIISPlatformHandlerUrl()
                   .UseStartup<Startup>()
                   .Build();
