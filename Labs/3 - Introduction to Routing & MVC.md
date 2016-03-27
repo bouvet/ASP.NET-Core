@@ -116,13 +116,15 @@
   ``` c#
   public void ConfigureServices(IServiceCollection services)
   {
+      ...
       services.AddMvc();
   }
   
   public void Configure(IApplicationBuilder app)
   {
       ...
-      services.UseMvc();
+      app.UseMvc(); // Sequence is important
+      app.UseRouter(routeBuilder.Build());
   }
   ```
 1. Run the site and verify the message is returned from your MVC controller
