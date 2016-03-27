@@ -103,6 +103,8 @@
 1. Create a new controller called "HomeController" in the new folder:
 
   ``` c#
+  using Microsoft.AspNetCore.Mvc;
+  
   public class HomeController
   {
       [HttpGet("/")]
