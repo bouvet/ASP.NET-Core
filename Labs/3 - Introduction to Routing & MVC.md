@@ -79,7 +79,6 @@ routeBuilder.MapGet("item/{itemName}", context =>
   ``` c#
 routeBuilder.MapGet("item/{id:int}", context =>
 {
-    // This should have been just context.GetRouteValue("itemName"), but the extension method is not available on context due to namespace alias.
     var id = Routing.RoutingHttpContextExtensions.GetRouteValue(context, "id");
     return context.Response.WriteAsync($"Item ID: {id}");
 });
