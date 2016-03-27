@@ -69,7 +69,7 @@
   routeBuilder.MapGet("item/{itemName}", context =>
   {
       // This should have been just context.GetRouteValue("itemName"), but the extension method is not available on context due to namespace alias.
-        var itemName = Routing.RoutingHttpContextExtensions.GetRouteValue(context, "itemName");
+      var itemName = Routing.RoutingHttpContextExtensions.GetRouteValue(context, "itemName");
       return context.Response.WriteAsync($"Item: {itemName}");
   });
   ```
