@@ -61,6 +61,7 @@
       host.Run();
   }
   ```
+  Change using Microsoft.AspNet.* to using Microsoft.AspNetCore.*
 1. Verify your application builds and runs (Ctrl+F5) 
 
 [Til startsiden] (../../..)
