@@ -23,7 +23,7 @@
 ## Create a new project, configure it to use the unstable packages feed, and upgrade it to RC2
 1. Open Visual Studio 2015
 1. Create a new ASP.NET 5 application:
-  1. File -> New -> ASP.NET Web Application -> ASP.NET 5 -> Empty Web Application
+  1. File -> New project -> ASP.NET Web Application -> ASP.NET 5 Templates -> Empty
 1. Open the `global.json` file and remove the `sdk` section. This will instruct Visual Studio to use the version configured as "default" from the steps before.
 1. Add a `NuGet.config` file to the root of the solution with the following contents. This will configure NuGet to use the unstable feed for packages:
 
