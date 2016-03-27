@@ -14,6 +14,18 @@
     "Microsoft.AspNet.Routing.Extensions": "1.0.0-*"
   }
   ```
+1. Add `System.Runtime` in `frameworkAssemblies` under `net451` in `project.json`:
+
+  ```JSON
+  "frameworks": {
+    "net451": {
+      "frameworkAssemblies": {
+        "System.Runtime": "4.0.0"
+      } 
+    },
+    "dnxcore50": { }
+  },
+  ```
 1. Open the `Startup.cs` file
 1. Add the routing services to the configuration in the `Startup.cs`:
 
