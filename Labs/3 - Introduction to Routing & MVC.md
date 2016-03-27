@@ -26,7 +26,7 @@
     "dnxcore50": { }
   },
   ```
-1. Open the `Startup.cs` file and add a using directive for Microsoft.AspNetCore.Routing
+1. Open the `Startup.cs` file
 1. Add the routing services to the configuration in the `Startup.cs`:
 
   ``` c#
@@ -42,7 +42,7 @@
   {
       app.UseIISPlatformHandler();
 
-      var routeBuilder = new RouteBuilder(app);
+      var routeBuilder = new Microsoft.AspNetCore.Routing.RouteBuilder(app);
 
       routeBuilder.MapGet("", context => context.Response.WriteAsync("Hello from Routing!"));
             
