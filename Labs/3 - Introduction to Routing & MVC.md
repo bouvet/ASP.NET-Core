@@ -78,12 +78,13 @@ routeBuilder.MapGet("item/{itemName}", context =>
 1. Modify the route to include a route constraint on the captured segmet, enforcing it to be a number:
   
   ``` c#
-  routeBuilder.MapGet("item/{itemName}", context =>
+routeBuilder.MapGet("item/{id:int}", context =>
 {
     // This should have been just context.GetRouteValue("itemName"), but the extension method is not available on context due to namespace alias.
-    var itemName = Routing.RoutingHttpContextExtensions.GetRouteValue(context, "itemName");
-    return context.Response.WriteAsync($"Item: {itemName}");
+    var id = Routing.RoutingHttpContextExtensions.GetRouteValue(context, "id");
+    return context.Response.WriteAsync($"Item ID: {id}");
 });
+
 
   ```
 1. Run the site again and see that the route is only matched when the captured segment is a valid number
