@@ -7,6 +7,19 @@
 
 ## Write a middleware that sets the current culture based on a query string value
 1. Start with the application you created in the first lab, or just create a new empty ASP.NET 5 application
+1. Add `System.Runtime` in `frameworkAssemblies` under `net451` in `project.json`:
+
+  ```JSON
+  "frameworks": {
+    "net451": {
+      "frameworkAssemblies": {
+        "System.Runtime": "4.0.0"
+      } 
+    },
+    "dnxcore50": { }
+  },
+  ```
+
 1. Open `Startup.cs`
 1. Create an inline middleware that runs **before** the hello world delegate that sets the culture for the current request from the query string:
   
@@ -39,7 +52,7 @@
   }
   ```
   
-1. Run the app now and set the culture via the query string, e.g. http://localhost/?culture=no
+1. Run the app now and set the culture via the query string, e.g. http://localhost/?culture=sv
 
 
 ## Move the middleware to its own type
