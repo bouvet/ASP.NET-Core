@@ -46,13 +46,14 @@
     "web": "WebApplication11"
   },
   ```
+  Change 'dnx451' to 'net451' in the 'frameworks' section.
 1. Update the `public static void Main` method in `Startup.cs` to match the following:
   
   ``` c#
   public static void Main(string[] args)
   {
       var host = new WebHostBuilder()
-          .UseDefaultConfiguration(args)
+          .UseDefaultHostingConfiguration(args)
           .UseServer("Microsoft.AspNetCore.Server.Kestrel")
           .UseIISPlatformHandlerUrl()
           .UseStartup<Startup>()
