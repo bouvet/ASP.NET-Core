@@ -121,6 +121,14 @@
 1. Create a new project in the `test` directory called `ProjectTest` using the "Class Library (Package)" project template
 1. Delete the `Class1.cs` file
 1. Open the `project.json` file and add a reference to `xunit` and `xunit.runner.visualstudio`, version "2.2.0-*" for both and ensure they restore successfully
+1. Add `System.Runtime`to `project.json`:
+1.1 "frameworks": {
+  "net451": {
+    "frameworkAssemblies": {
+      "System.Runtime": "4.0.0"
+    }
+  },
+...
 1. Add a new class `MyTest.cs`
 1. Add a method `public void MyFirstTest()` and decorate it with the `[Fact]` attribute, importing any required namespaces as you go
 1. Do a simple assertion in the method body that will pass, e.g. `Assert.Equal(1, 1);`
