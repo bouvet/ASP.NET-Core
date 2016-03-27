@@ -46,7 +46,7 @@
     "web": "WebApplication11"
   },
   ```
-  Change 'dnx451' to 'net451' in the 'frameworks' section.
+  Change from dnx451 to net451 in the frameworks section.
 1. Update the `public static void Main` method in `Startup.cs` to match the following:
   
   ``` c#
@@ -62,7 +62,7 @@
       host.Run();
   }
   ```
-  Change using Microsoft.AspNet.* to using Microsoft.AspNetCore.*
+  Change from using Microsoft.AspNet.* to using Microsoft.AspNetCore.*
 1. Verify your application builds and runs (Ctrl+F5) 
 
 [Til startsiden] (../../..)
