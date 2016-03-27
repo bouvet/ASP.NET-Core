@@ -36,7 +36,7 @@
    </packageSources>
    </configuration>
    ```
-1. Open the `project.json` file and change the versions listed in the `dependencies` section from "1.0.0-rc1-final" to "1.0.0-*". This will instruct NuGet to download the latest builds of these packages from the feeds configured in the step above.
+1. Open the `project.json` file and change the versions listed in the `dependencies` section from "Microsoft.AspNet...1.0.0-rc1-final" to "Microsoft.AspNetCore...1.0.0-*". This will instruct NuGet to download the latest builds of these packages from the feeds configured in the step above.
   1. Open the "References" node in Solution Explorer and confirm the package versions are "1.0.0-rc2-*"
 1. Update the `commands` section of the `project.json` file to look like the following, ensuring you use the name of your application:
   
