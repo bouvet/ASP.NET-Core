@@ -121,7 +121,7 @@
 1. Create a new project in the `test` directory called `ProjectTest` using the "Class Library (Package)" project template
 1. Delete the `Class1.cs` file
 1. Open the `project.json` file and add a reference to `xunit` and `xunit.runner.visualstudio`, version "2.2.0-*" for both and ensure they restore successfully
-1. Add `System.Runtime`to `project.json`: 
+1. Add `System.Runtime`to `project.json`:
   ``` JSON
   "frameworks": {
     "net451": {
