@@ -64,7 +64,7 @@
 1. In the application's `Startup.cs` file, add a method `public void ConfigureServices(IServiceCollection services)`
 1. Register the `IRequestIdFactory` service as a singleton: `services.AddSingleton<IRequestIdFactory, RequestIdFactory>();`
 1. Register the `IRequestId` service as scoped: `services.AddScoped<IRequestId, RequestId>();`
-1 The `ConfigureServices` method should now look something like this:
+1. The `ConfigureServices` method should now look something like this:
 
   ``` C#
   public void ConfigureServices(IServiceCollection services)
