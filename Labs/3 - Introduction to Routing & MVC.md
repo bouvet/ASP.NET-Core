@@ -27,6 +27,12 @@
   },
   ```
 1. Open the `Startup.cs` file
+1. Add an using directive for Microsoft.AspNetCore.Routing. We need the Routing-alias because of namespace collision with Microsoft.AspNetCore.Builder (RouteBuilder.MapGet is defined as an extension method in both Routing and Builder)
+
+  ``` c#
+  using Routing = Microsoft.AspNetCore.Routing;
+  ```
+
 1. Add the routing services to the configuration in the `Startup.cs`:
 
   ``` c#
@@ -42,7 +48,7 @@
   {
       app.UseIISPlatformHandler();
 
-      var routeBuilder = new Microsoft.AspNetCore.Routing.RouteBuilder(app);
+      var routeBuilder = new Routing.RouteBuilder(app);
 
       routeBuilder.MapGet("", context => context.Response.WriteAsync("Hello from Routing!"));
             
@@ -67,7 +73,13 @@
 1. Modify the route to include a route constraint on the captured segmet, enforcing it to be a number:
   
   ``` c#
-  routeBuilder.MapGet("item/{id:int}", context => context.Response.WriteAsync($"Item ID: {context.GetRouteValue("id")}"));
+  routeBuilder.MapGet("item/{itemName}", context =>
+{
+    // This should have been just context.GetRouteValue("itemName"), but the extension method is not available on context due to namespace alias.
+    var itemName = Routing.RoutingHttpContextExtensions.GetRouteValue(context, "itemName");
+    return context.Response.WriteAsync($"Item: {itemName}");
+});
+
   ```
 1. Run the site again and see that the route is only matched when the captured segment is a valid number
 1. Modify the router to include both versions of the route above (with and without the route constraint)
