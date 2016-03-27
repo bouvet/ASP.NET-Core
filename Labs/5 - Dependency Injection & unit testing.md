@@ -77,8 +77,8 @@
 ## Create and add a middleware that logs the request ID
 1. Create a new folder in the application `Middleware`
 1. In the folder, create a class `RequestIdMiddleware`
-1. Create a constructor `public RequestIdMiddleware(RequestDelegate next, IRequestId requestId, ILogger<RequestIdMiddleware> logger)` and store the parameters in private fields
-1. Add a method `public Task Invoke(HttpContext context)` and in its body log the request ID using the `ILogger` and `IRequestId` injected from the constructor
+1. Create a constructor `public RequestIdMiddleware(RequestDelegate next, ILogger<RequestIdMiddleware> logger)` and store the parameters in private fields
+1. Add a method `public Task Invoke(HttpContext context, IRequestId requestId)` and in its body log the request ID using the `ILogger` injected from the constructor
 1. Your middleware class should look something like this:
 
   ``` C#
