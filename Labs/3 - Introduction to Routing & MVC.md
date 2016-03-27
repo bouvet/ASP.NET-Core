@@ -27,7 +27,7 @@
   },
   ```
 1. Open the `Startup.cs` file
-1. Add an using directive for Microsoft.AspNetCore.Routing. We need the Routing-alias because of namespace collision with Microsoft.AspNetCore.Builder (RouteBuilder.MapGet is defined as an extension method in both Routing and Builder)
+1. Add an using directive for Microsoft.AspNetCore.Routing. We need an alias for this directive because of a naming collision. (RouteBuilder.MapGet is defined as an extension method in both Microsoft.AspNetCore.Routing and Microsoft.AspNetCore.Builder)
 
   ``` c#
   using Routing = Microsoft.AspNetCore.Routing;
