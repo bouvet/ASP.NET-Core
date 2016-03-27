@@ -1,5 +1,4 @@
 # 5. Dependency Injection & unit testing
-#todo: Verifiser koden
 
 [Til startsiden] (../../..)
 
