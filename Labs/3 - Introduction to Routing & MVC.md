@@ -96,7 +96,7 @@
   ``` JSON
   "dependencies": {
     ...,
-    "Microsoft.AspNetCore.Mvc": "6.0.0-*"
+    "Microsoft.AspNetCore.Mvc": "1.0.0-*"
   }
   ```
 1. Add a "Controllers" folder to your application
