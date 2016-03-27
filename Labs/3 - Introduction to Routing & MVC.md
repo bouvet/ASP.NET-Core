@@ -67,7 +67,12 @@
 1. Add another route that captures the name of an item from the URL, e.g. "item/{itemName}", and displays it in the response:
   
   ``` c#
-  routeBuilder.MapGet("item/{itemName}", context => context.Response.WriteAsync($"Item: {context.GetRouteValue("itemName")}"));
+routeBuilder.MapGet("item/{itemName}", context =>
+{
+    // This should have been just context.GetRouteValue("itemName"), but the extension method is not available on context due to namespace alias.
+    var itemName = Routing.RoutingHttpContextExtensions.GetRouteValue(context, "itemName");
+    return context.Response.WriteAsync($"Item: {itemName}");
+});
   ```
 1. Run the site and verify that your new route works
 1. Modify the route to include a route constraint on the captured segmet, enforcing it to be a number:
