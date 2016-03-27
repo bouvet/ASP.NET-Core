@@ -6,7 +6,7 @@
 ## Install the routing package
 1. Use the application you created in the first lab
 1. Open the `project.json` file
-1. In the `dependencies` section, add an entry for the "Microosft.AspNet.Routing.Extensions" package:
+1. In the `dependencies` section, add an entry for the "Microosft.AspNetCore.Routing.Extensions" package:
 
   ``` JSON
   "dependencies": {
