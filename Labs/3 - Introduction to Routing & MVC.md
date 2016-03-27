@@ -68,9 +68,9 @@
   ``` c#
 routeBuilder.MapGet("item/{itemName}", context =>
 {
-    // This should have been just context.GetRouteValue("itemName"), but the extension method is not available on context due to namespace alias.
-    var itemName = Routing.RoutingHttpContextExtensions.GetRouteValue(context, "itemName");
-    return context.Response.WriteAsync($"Item: {itemName}");
+      // This should have been just context.GetRouteValue("itemName"), but the extension method is not available on context due to namespace alias.
+      var itemName = Routing.RoutingHttpContextExtensions.GetRouteValue(context, "itemName");
+      return context.Response.WriteAsync($"Item: {itemName}");
 });
   ```
 1. Run the site and verify that your new route works
@@ -79,8 +79,8 @@ routeBuilder.MapGet("item/{itemName}", context =>
   ``` c#
 routeBuilder.MapGet("item/{id:int}", context =>
 {
-    var id = Routing.RoutingHttpContextExtensions.GetRouteValue(context, "id");
-    return context.Response.WriteAsync($"Item ID: {id}");
+     var id = Routing.RoutingHttpContextExtensions.GetRouteValue(context, "id");
+     return context.Response.WriteAsync($"Item ID: {id}");
 });
 
 
