@@ -1,5 +1,4 @@
 # 7. Working with Razor Tag Helpers
-#todo: Verifiser koden
 
 [Til startsiden] (../../..)
 
