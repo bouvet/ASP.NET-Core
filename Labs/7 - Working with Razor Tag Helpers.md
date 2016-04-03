@@ -14,7 +14,7 @@
 ## Create a custom Tag Helper
 1. Create a new class in the application you created above, `public class RepeatTagHelper : TagHelper` and resolve any required namespaces
 1. Add a property `public int Count { get; set; }`
-1. Override the `ProcessAsync(TagHelperContext context, TagHelperOutput output)` method
+1. Override the `Process(TagHelperContext context, TagHelperOutput output)` method
 1. Add code to the body of `Process` that repeats the content via the `output` parameter in a loop for `Count` iterations, e.g.:
   
   ``` C#
@@ -35,7 +35,7 @@
   
 1. Run the application again and ensure your Tag Helper is working
 1. Note that the Tag Helper is rendering itself as a `<repeat>` tag. We'll fix that now so that only the contents are rendered.
-1. Open the `RepeatTagHelper` again and in the `ProcessAsync` method add a line to null out the tag name: `output.TagName = null;`
+1. Open the `RepeatTagHelper` again and in the `Process` method add a line to null out the tag name: `output.TagName = null;`
 1. Run the application again and see that the outer tag is no longer rendered
 
 ## Extra if you have time
