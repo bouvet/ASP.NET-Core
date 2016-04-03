@@ -81,7 +81,7 @@
 
 ## Returning JSON from the controller
 
-1. Add the `Microsoft.AspNet.Mvc.Formatters.Json` to `project.json`:
+1. Add the `Microsoft.AspNetCore.Mvc.Formatters.Json` to `project.json`:
 
   ```JSON
   "dependencies": {
