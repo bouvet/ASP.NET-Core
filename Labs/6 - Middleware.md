@@ -155,11 +155,11 @@
 1. Change the `Invoke` method of the middleware to use the DefaultCulture from options if none specified on the query string
 
   ```C#
-  public Task Invoke(HttpContext httpContext)
+  public Task Invoke(HttpContext context)
   {
       CultureInfo requestCulture = null;
 
-      var cultureQuery = httpContext.Request.Query["culture"];
+      var cultureQuery = context.Request.Query["culture"];
       if (!string.IsNullOrWhiteSpace(cultureQuery))
       {
           requestCulture = new CultureInfo(cultureQuery);
@@ -180,7 +180,7 @@
   #endif
       }
 
-      return _next(httpContext);
+      return _next(context);
   }
   ```
 1. Set the fallback culture in `Startup.cs` `Configure` method to some default value:
