@@ -68,11 +68,7 @@
   
   ``` c#
 
-  routeBuilder.MapGet("item/{id:int}", context =>
-  {
-     var id = Routing.RoutingHttpContextExtensions.GetRouteValue(context, "id");
-     return context.Response.WriteAsync($"Item ID: {id}");
-  });
+  routeBuilder.MapGet("item/{id:int}", context => context.Response.WriteAsync($"Item ID: {context.GetRouteValue("id")}"));
 
 
   ```
