@@ -10,7 +10,7 @@
   ``` JSON
   "dependencies": {
     ...,
-    "Microsoft.AspNetCore.Routing.Extensions": "1.0.0-*"
+    "Microsoft.AspNetCore.Routing": "1.0.0-*"
   }
   ```
 1. Add `System.Runtime` in `frameworkAssemblies` under `net451` in `project.json`:
@@ -26,12 +26,7 @@
   },
   ```
 1. Open the `Startup.cs` file
-1. Add an using directive for Microsoft.AspNetCore.Routing. We need an alias for this directive because of a naming collision. (RouteBuilder.MapGet is defined as an extension method in both Microsoft.AspNetCore.Routing and Microsoft.AspNetCore.Builder)
-
-  ``` c#
-  using Routing = Microsoft.AspNetCore.Routing;
-  ```
-
+1. Add an using directive for Microsoft.AspNetCore.Routing.
 1. Add the routing services to the configuration in the `Startup.cs`:
 
   ``` c#
