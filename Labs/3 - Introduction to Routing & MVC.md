@@ -10,7 +10,7 @@
   ``` JSON
   "dependencies": {
     ...,
-    "Microsoft.AspNet.Routing.Extensions": "1.0.0-*"
+    "Microsoft.AspNetCore.Routing.Extensions": "1.0.0-*"
   }
   ```
 1. Add `System.Runtime` in `frameworkAssemblies` under `net451` in `project.json`:
