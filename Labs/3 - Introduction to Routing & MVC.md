@@ -77,7 +77,7 @@
 1. Experiment with changing the order the routes are added and observe what affect that has on which route is matched for a given URL
 
 # Add MVC
-1. Open `project.json` and add "Microsoft.AspNet.Mvc" to the `dependencies` section:
+1. Open `project.json` and add "Microsoft.AspNetCore.Mvc" to the `dependencies` section:
 
   ``` JSON
   "dependencies": {
