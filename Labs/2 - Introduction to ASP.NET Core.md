@@ -109,7 +109,7 @@
   ```C#
   public static void Main(string[] args)
   {
-      var host = new WebApplicationBuilder()
+      var host = new WebHostBuilder()
                   .UseDefaultHostingConfiguration(args)
                   .UseStartup<Startup>()
                   .Build();
