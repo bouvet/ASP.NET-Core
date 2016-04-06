@@ -42,7 +42,7 @@
   {
       app.UseIISPlatformHandler();
 
-      var routeBuilder = new Routing.RouteBuilder(app);
+      var routeBuilder = new RouteBuilder(app);
 
       routeBuilder.MapGet("", context => context.Response.WriteAsync("Hello from Routing!"));
             
